@@ -27,11 +27,6 @@ public class SecondActivity extends AppCompatActivity {
             menu.setText(bundle.getString("Menu"));
             jumlah.setText(bundle.getString("Jumlah"));
             bayar.setText(bundle.getString("Total"));
-        }else{
-            restaurant.setText(getIntent().getStringExtra("Restaurant"));
-            menu.setText(getIntent().getStringExtra("Menu"));
-            jumlah.setText(getIntent().getStringExtra("Jumlah"));
-            bayar.setText(getIntent().getStringExtra("Total"));
         }
     }
 }
