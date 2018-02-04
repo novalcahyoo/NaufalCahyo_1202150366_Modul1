@@ -38,15 +38,11 @@ public class MainActivity extends AppCompatActivity {
         total = Integer.parseInt(jumlah.trim());
         bayar = total * hrgApnormal;
 
-        Bundle bundle = new Bundle();
-        bundle.putString("Menu", menu);
-        bundle.putString("Jumlah",jumlah);
-        bundle.putString("Total",String.valueOf(bayar));
-        bundle.putString("Restaurant","Apnormal");
-
         Intent intent = new Intent(this,SecondActivity.class);
 
-        intent.putExtras(bundle);
+        intent.putExtra("Menu", menu);
+        intent.putExtra("Jumlah",jumlah);
+        intent.putExtra("Total",String.valueOf(bayar));
 
         startActivity(intent);
 
