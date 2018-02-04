@@ -3,6 +3,7 @@ package com.naufalcahyo.modul1.naufalcahyo_1202150366_modul1;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -18,8 +19,7 @@ public class SecondActivity extends AppCompatActivity {
         jumlah = (TextView) findViewById(R.id.jumlah);
         bayar = (TextView) findViewById(R.id.bayar);
 
-
-        if (getIntent().getExtras()!=null){
+        if (getIntent().getExtras() != null) {
 
             Bundle bundle = getIntent().getExtras();
 
@@ -27,6 +27,8 @@ public class SecondActivity extends AppCompatActivity {
             menu.setText(bundle.getString("Menu"));
             jumlah.setText(bundle.getString("Jumlah"));
             bayar.setText(bundle.getString("Total"));
+        }else {
+            Toast.makeText(this, "Pilih dulu boy", Toast.LENGTH_LONG).show();
         }
     }
 }
